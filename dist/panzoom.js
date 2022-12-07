@@ -195,6 +195,8 @@
                 return (prefixCache[name] = prefixedName);
             }
         }
+      // when all fails, return the most common one
+      return (prefixCache[name] = `${prefixes[0]}${capName}`)
     }
     /**
      * Gets a style value expected to be a number
